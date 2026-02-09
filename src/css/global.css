@@ -1,0 +1,139 @@
+:root {
+  --color-bg: #0a0a0a;
+  --color-bg-secondary: #111111;
+  --color-bg-elevated: #1a1a1a;
+  --color-text: #e5e5e5;
+  --color-text-secondary: #a3a3a3;
+  --color-text-muted: #737373;
+  --color-border: #262626;
+  --color-border-subtle: #1f1f1f;
+  --color-accent: #3b82f6;
+  --color-accent-hover: #60a5fa;
+  --color-accent-muted: rgba(59, 130, 246, 0.15);
+  --color-accent-glow: rgba(59, 130, 246, 0.25);
+
+  --gradient-text: linear-gradient(135deg, #e5e5e5 0%, #a3a3a3 100%);
+  --gradient-accent: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  --gradient-card: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.08) 0%,
+    rgba(139, 92, 246, 0.08) 100%
+  );
+  --gradient-border: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.5) 0%,
+    rgba(139, 92, 246, 0.5) 100%
+  );
+
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+
+  --font-size-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --font-size-sm: clamp(0.875rem, 0.83rem + 0.2vw, 1rem);
+  --font-size-base: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+  --font-size-lg: clamp(1.125rem, 1.05rem + 0.375vw, 1.5rem);
+  --font-size-xl: clamp(1.25rem, 1.15rem + 0.5vw, 1.75rem);
+  --font-size-2xl: clamp(1.5rem, 1.35rem + 0.75vw, 2.25rem);
+  --font-size-3xl: clamp(1.875rem, 1.65rem + 1.125vw, 3rem);
+  --font-size-4xl: clamp(2.25rem, 1.9rem + 1.75vw, 4rem);
+  --font-size-5xl: clamp(3rem, 2.4rem + 3vw, 6rem);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html {
+  hanging-punctuation: first last;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  color-scheme: dark;
+}
+
+body {
+  min-block-size: 100dvb;
+  line-height: 1.5;
+  font-size: var(--font-size-base);
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+}
+
+img,
+picture,
+video,
+canvas {
+  display: block;
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+svg {
+  fill: currentColor;
+  max-inline-size: 100%;
+}
+
+p,
+li,
+dt,
+dd {
+  overflow-wrap: break-word;
+  max-inline-size: 60ch;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  text-wrap: balance;
+  line-height: 1.1;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+ul[role="list"],
+ol[role="list"],
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+.intrinsic-container > * {
+  min-inline-size: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
