@@ -1,11 +1,11 @@
 :root {
-  --color-bg: #0a0a0a;
+  --color-bg: #202020;
   --color-bg-secondary: #111111;
   --color-bg-elevated: #1a1a1a;
-  --color-text: #e5e5e5;
+  --color-text: #e2e2e2;
   --color-text-secondary: #a3a3a3;
   --color-text-muted: #737373;
-  --color-border: #262626;
+  --color-border: #333333;
   --color-border-subtle: #1f1f1f;
   --color-accent: #3b82f6;
   --color-accent-hover: #60a5fa;
@@ -38,6 +38,7 @@
   --font-size-sm: clamp(0.875rem, 0.83rem + 0.2vw, 1rem);
   --font-size-base: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
   --font-size-lg: clamp(1.125rem, 1.05rem + 0.375vw, 1.5rem);
+
   --font-size-xl: clamp(1.25rem, 1.15rem + 0.5vw, 1.75rem);
   --font-size-2xl: clamp(1.5rem, 1.35rem + 0.75vw, 2.25rem);
   --font-size-3xl: clamp(1.875rem, 1.65rem + 1.125vw, 3rem);
@@ -68,10 +69,7 @@ body {
   min-block-size: 100dvb;
   line-height: 1.5;
   font-size: var(--font-size-base);
-  font-family:
-    system-ui,
-    -apple-system,
-    sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
   background-color: var(--color-bg);
   color: var(--color-text);
   -webkit-font-smoothing: antialiased;
@@ -136,4 +134,13 @@ ol[class] {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+.container {
+  width: min(100% - 2rem, 780px);
+  margin-inline: auto;
+}
+
+header {
+  margin-block: 2rem;
 }
